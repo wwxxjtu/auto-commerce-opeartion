@@ -1,0 +1,32 @@
+{
+  "name": "sms-receiver",
+  "version": "1.0.0",
+  "description": "SMS Receiver Skill for OpenClaw",
+  "author": "User",
+  "main": "scripts/sms_receiver.py",
+  "scripts": {
+    "start": "scripts/run.bat",
+    "start-webhook": "scripts/run.bat --action start-webhook",
+    "start-mcp": "scripts/run.bat --action start-mcp",
+    "start-all": "scripts/run.bat --action start-all",
+    "stop-webhook": "scripts/run.bat --action stop-webhook",
+    "stop-mcp": "scripts/run.bat --action stop-mcp",
+    "stop-all": "scripts/run.bat --action stop-all",
+    "list-sms": "scripts/run.bat --action list-sms",
+    "search-sms": "scripts/run.bat --action search-sms",
+    "clear-sms": "scripts/run.bat --action clear-sms",
+    "status": "scripts/run.bat --action status",
+    "help": "scripts/run.bat --action help"
+  },
+  "dependencies": {
+    "python": ">=3.8"
+  },
+  "config": {
+    "default": {
+      "SMS_SERVER_HOST": "0.0.0.0",
+      "SMS_SERVER_PORT": 8000,
+      "SMS_WEBHOOK_PATH": "/webhook/sms",
+      "SMS_STORAGE_FILE": "sms_data.json"
+    }
+  }
+}
